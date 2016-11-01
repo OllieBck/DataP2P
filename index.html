@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>P2P Data</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="othermouse" style="background-color:red; position: absolute; top: 0px; left: 0px; width: 10px; height: 10px;">
+    <img class="smile" src="./assets/bFace.png"; style="position: absolute; top: 0px; left: 0px; width: 100px; height: 100px;"></img>
+    <img class="frown" src="./assets/bFrown.png"; style="position: absolute; top: 0px; left: 0px; width: 100px; height: 100px;"></img>
+  </div>
+    <div id="yourmouse" style="background-color:green; position: absolute; top: 0px; left: 0px; width: 10px; height: 10px;">
+    <img class="smile" src="./assets/yFace.png"; style="position: absolute; top: 0px; left: 0px; width: 100px; height: 100px;"></img>
+    <img class="frown" src="./assets/yFrown.png"; style="position: absolute; top: 0px; left: 0px; width: 100px; height: 100px;"></img>
+  </div>
+    <script src="peer.min.js"></script>
+    <script src="./client.js"></script>
+    <div id="chatlog"></div>
+    <footer>
+    <input type="text" id="other_peer_id" value="PeerID to connect with" onkeydown="if(event.keyCode == 13){makeConnection();}">
+		<input type="button" value="Connect" onclick="makeConnection()"><br />
+		<input type="text" id="chat" onkeydown="if(event.keyCode == 13){sendMessage();}">
+		<input type="button" value="Send" onclick="sendMessage()"><br />
+    </footer>
+  </body>
+</html>
